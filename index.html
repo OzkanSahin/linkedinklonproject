@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="index.html" class="logo"
+          ><img src="img/logo.png" alt="logo"
+        /></a>
+
+        <div class="search-box">
+          <img src="img/search.png" alt="search" />
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbar-center">
+        <ul>
+          <li>
+            <a href="#" class="active-link"
+              ><img src="img/home.png" /><span>Ana Sayfa</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/network.png" /><span>Bağlantılarım</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/jobs.png" /><span>İş İlanları</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/message.png" /><span>Mesajlaşma</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="img/notification.png" /><span>Bildirimler</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <div class="online">
+          <img
+            src="img/user-1.jpg"
+            alt="profile"
+            class="nav-profile-img"
+            onclick="toggleMenu()"
+          />
+        </div>
+      </div>
+
+      <!--profile drowdown menu-->
+      <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+          <div class="user-info">
+            <img src="img/user-1.jpg" />
+            <div>
+              <h3>Özkan ŞAHİN</h3>
+              <a href="#">See your profile</a>
+            </div>
+          </div>
+          <hr />
+          <a href="#" class="profile-menu-link">
+            <img src="img/feedback.png" alt="" />
+            <p>Give Feedback</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="img/setting.png" alt="" />
+            <p>Settings & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="img/help.png" alt="" />
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="img/display.png" alt="" />
+            <p>Display & Accessibility</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="img/logout.png" alt="" />
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Green -->
+    <div class="container">
+      <!--! left-sidebar-->
+      <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+          <img src="img/cover-pic.png" alt="cover" width="100%" />
+          <div class="sidebar-profile-info">
+            <img src="img/user-1.jpg" alt="user-1" />
+            <h1>Özkan ŞAHİN</h1>
+            <h3>Web Developer at Microsoft</h3>
+            <ul>
+              <li>Your profile views<span>98</span></li>
+              <li>Your post views<span>748</span></li>
+              <li>Your connections views<span>317</span></li>
+            </ul>
+          </div>
+          <div class="sidebar-profile-link">
+            <a href="#"><img src="img/items.png" />My items</a>
+            <a href="#"><img src="img/premium.png" />Try Premium</a>
+          </div>
+        </div>
+        <div class="sidebar-activity" id="sidebarActivity">
+          <h3>RECENT</h3>
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />Web Development</a
+          >
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />User Interface</a
+          >
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />Online Learning</a
+          >
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />Learn Online</a
+          >
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />Code Better</a
+          >
+          <a href="#"
+            ><img src="img/recent.png" alt="recent" />Group Learning</a
+          >
+          <h3>GROUPS</h3>
+          <a href="#"
+            ><img src="img/group.png" alt="recent" />Web Desing Group
+          </a>
+          <a href="#"
+            ><img src="img/group.png" alt="recent" />HTML & CSS Learners
+          </a>
+          <a href="#"
+            ><img src="img/group.png" alt="recent" />Python & Javascript
+            Group
+          </a>
+          <a href="#"
+            ><img src="img/group.png" alt="recent" />Learn Coding Online
+          </a>
+          <h3>HASHTAG</h3>
+          <a href="#"
+            ><img src="img/hashtag.png" alt="recent" />webdevelopment
+          </a>
+          <a href="#"
+            ><img src="img/hashtag.png" alt="recent" />userinterface
+          </a>
+          <a href="#"
+            ><img src="img/hashtag.png" alt="recent" />onlinelearning
+          </a>
+          <div class="discover-more-link">
+            <a href="#">Discover more</a>
+          </div>
+        </div>
+        <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+      </div>
+      <!--! main-content  -->
+      <div class="main-content">
+        <div class="create-post">
+          <div class="create-post-input">
+            <img src="img/user-1.jpg" />
+            <textarea rows="2" placeholder="Write a post"></textarea>
+          </div>
+
+          <div class="create-post-links">
+            <li><img src="img/photo.png" />Photo</li>
+            <li><img src="img/video.png" />Video</li>
+            <li><img src="img/event.png" />Event</li>
+            <li>Post</li>
+          </div>
+        </div>
+        <div class="sort-by">
+          <hr />
+          <p>
+            Sort by: <span>top <img src="img/down-arrow.png" alt="" /></span>
+          </p>
+        </div>
+
+        <div class="post">
+          <div class="post-author">
+            <img src="img/user-3.png" />
+            <div>
+              <h1>Yasemin Çelik</h1>
+              <small>Microsoft Company's Project Manager | Project Manager</small>
+              <small>7 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="img/post-image-1.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="img/thumbsup.png" />
+              <img src="img/love.png" />
+              <img src="img/clap.png" />
+              <span class="liked-users">Sevgi Gül and 48 others</span>
+            </div>
+            <div><span>41 comment &middot; 66 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="img/user-1.jpg" class="post-activity-user-icon" />
+              <img
+                src="img/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="img/user-4.png" />
+            <div>
+              <h1>Büşra Doruk</h1>
+              <small>Symantec Company's Frontend Developers | Frontend Software Developer</small>
+              <small>4 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="img/post-image-2.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="img/thumbsup.png" />
+              <img src="img/love.png" />
+              <img src="img/clap.png" />
+              <span class="liked-users">Meltem Sevinç and 67 others</span>
+            </div>
+            <div><span>28 comment &middot; 43 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="img/user-1.jpg" class="post-activity-user-icon" />
+              <img
+                src="img/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="img/user-5.png" />
+            <div>
+              <h1>Gökçe Semra</h1>
+              <small>Tesla Company's Human Relations Officer | Human Resources</small>
+              <small>6 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="img/post-image-3.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="img/thumbsup.png" />
+              <img src="img/love.png" />
+              <img src="img/clap.png" />
+              <span class="liked-users">Gökhan Tekin and 84 others</span>
+            </div>
+            <div><span>19 comment &middot; 28 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="img/user-1.jpg" class="post-activity-user-icon" />
+              <img
+                src="img/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="img/user-2.png" />
+            <div>
+              <h1>Ahmet Mutlu</h1>
+              <small>Volkswagen Company's Web Designer | Web Designer</small>
+              <small>3 hours ago</small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+            eaque aliquam amet deserunt minima blanditiis soluta totam repellat
+            obcaecati, assumenda corporis nisi labore necessitatibus eius?
+          </p>
+          <img src="img/post-image-4.png" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="img/thumbsup.png" />
+              <img src="img/love.png" />
+              <img src="img/clap.png" />
+              <span class="liked-users">Hakan Kaplan and 62 others</span>
+            </div>
+            <div><span>32 comment &middot; 54 shares</span></div>
+          </div>
+
+          <div class="post-activity">
+            <div>
+              <img src="img/user-1.jpg" class="post-activity-user-icon" />
+              <img
+                src="img/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="img/like.png" alt="" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/comment.png" alt="" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/share.png" alt="" />
+              <span>Share</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="img/send.png" alt="" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--! right-sidebar  -->
+      <div class="right-sidebar">
+        <div class="sidebar-news">
+          <img src="img/more.png" alt="more" class="info-icon" />
+          <h3>Trending News</h3>
+          <a href="#">High demand for skilled manpower</a>
+          <span> 2d ago &middot; 12,764 readers</span>
+
+          <a href="#">Carreers growing horizontally too</a>
+          <span> 14d ago &middot; 1,872 readers</span>
+
+          <a href="#">Less work visa for US, more for UK</a>
+          <span>3d ago &middot; 21,861 readers</span>
+
+          <a href="#">More hiring = higher confidence?</a>
+          <span>17d ago &middot; 9,397 readers</span>
+
+          <a href="#">Gautam Adani is the world's third richest</a>
+          <span>11d ago &middot; 5,784 readers</span>
+
+          <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="sidebar-ad">
+          <small>Ad &middot; &middot; &middot;</small>
+          <p>Master the 5 priciples of web design</p>
+          <div>
+            <img src="img/user-1.jpg" />
+            <img style="height: 60px;" src="img/msi-logo.png" />
+          </div>
+          <b>Brand and Demand in MSİ</b>
+          <a href="#" class="ad-link">Learn More</a>
+        </div>
+        <div class="sidebar-useful-links">
+          <a href="#">About</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Advertisting</a>
+          <a href="#">Get the App</a>
+          <a href="#">More</a>
+
+          <div class="copyright-msg">
+            <img src="img/logo.png" />
+            <p>Linkedup &#169; 2023. All right reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let profileMenu = document.getElementById("profileMenu");
+      function toggleMenu() {
+        profileMenu.classList.toggle("open-menu");
+      }
+    </script>
+    <script>
+      let sidectivity = document.getElementById("sidebarActivity");
+      let moreLink = document.getElementById("showMoreLink");
+      function toggleActivity() {
+        sidectivity.classList.toggle("open-activity");
+      }
+    </script>
+  </body>
+</html>
